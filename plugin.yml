@@ -1,0 +1,239 @@
+name: ProtectionStones
+main: com.axeldios.ProtectionStones.ProtectionStones
+version: 1.9i
+author: AxelDios
+website: http://dev.bukkit.org/server-mods/protectionstones/
+depend: [WorldGuard]
+database: false
+
+commands:
+  ps:
+    description: ProtectionStones Commands
+    usage: /ps help 
+
+permissions:
+  protectionstones.create:
+    description: Place Block, Adding WorldGuard Region
+    default: true
+  protectionstones.destroy:
+    description: Break Block, Remove WorldGuard Region
+    default: true
+  protectionstones.members:
+    description: Allow Use of Members Commands
+    default: true
+  protectionstones.owners:
+    description: Allow Use of Owners Commands
+    default: op
+  protectionstones.superowner:
+    description: Overrides command region owner checks
+    default: op
+  protectionstones.toggle:
+    description: Allow Use of Toggle Command
+    default: op
+  protectionstones.flags:
+    description: Allows Use of Flags Commands
+    default: true
+  protectionstones.priority:
+    description: Allows Use of Priority Command
+    default: true
+  protectionstones.info:
+    description: Allows Use of the Info Command
+    default: true
+  protectionstones.region:
+    description: Allows Use of Region Commands
+    default: op
+  protectionstones.admin:
+    description: Allows Use of Admin Commands
+    default: op
+  protectionstones.view:
+    description: Allows Use of the View Command
+    default: true
+  protectionstones.center:
+    description: Allows Use of the Center Command
+    default: true
+  protectionstones.hide:
+    description: Allows Use of the Hide Command
+    default: op
+  protectionstones.unhide:
+    description: Allows Use of the Unhide Command
+    default: op
+  protectionstones.group1:
+    description: Places player in region limit group #1
+    default: false
+  protectionstones.group2:
+    description: Places player in region limit group #2
+    default: false
+  protectionstones.group3:
+    description: Places player in region limit group #3
+    default: false
+  protectionstones.group4:
+    description: Places player in region limit group #4
+    default: false
+  protectionstones.group5:
+    description: Places player in region limit group #5
+    default: false
+  protectionstones.group6:
+    description: Places player in region limit group #6
+    default: false
+  protectionstones.group7:
+    description: Places player in region limit group #7
+    default: false
+  protectionstones.group8:
+    description: Places player in region limit group #8
+    default: false
+  protectionstones.group9:
+    description: Places player in region limit group #9
+    default: false
+  protectionstones.flag.passthrough:
+    description: Allows Setting of Region PASSTHROUGH Flag
+    default: true
+  protectionstones.flag.build:
+    description: Allows Setting of Region BUILD Flag
+    default: false
+  protectionstones.flag.pvp:
+    description: Allows Setting of Region PVP Flag
+    default: true
+  protectionstones.flag.chest-access:
+    description: Allows Setting of Region CHEST-ACCESS Flag
+    default: true
+  protectionstones.flag.pistons:
+    description: Allows Setting of Region PISTONS Flag
+    default: true
+  protectionstones.flag.tnt:
+    description: Allows Setting of Region TNT Flag
+    default: true
+  protectionstones.flag.lighter:
+    description: Allows Setting of Region LIGHTER Flag
+    default: true
+  protectionstones.flag.use:
+    description: Allows Setting of Region USE Flag
+    default: true
+  protectionstones.flag.vehicle-place:
+    description: Allows Setting of Region VEHICLE-PLACE Flag
+    default: true
+  protectionstones.flag.vehicle-destroy:
+    description: Allows Setting of Region VEHICLE-DESTROY Flag
+    default: true
+  protectionstones.flag.sleep:
+    description: Allows Setting of Region SLEEP Flag
+    default: true
+  protectionstones.flag.mob-damage:
+    description: Allows Setting of Region MOB-DAMAGE Flag
+    default: true
+  protectionstones.flag.mob-spawning:
+    description: Allows Setting of Region MOB-SPAWNING Flag
+    default: true
+  protectionstones.flag.deny-spawn:
+    description: Allows Setting of Region DENY-SPAWN Flag
+    default: true
+  protectionstones.flag.invincible:
+    description: Allows Setting of Region INVINCIBLE Flag
+    default: true
+  protectionstones.flag.creeper-explosion:
+    description: Allows Setting of Region CREEPER-EXPLOSION Flag
+    default: true
+  protectionstones.flag.ghast-fireball:
+    description: Allows Setting of Region GHAST-FIREBALL Flag
+    default: true
+  protectionstones.flag.enderman-grief:
+    description: Allows Setting of Region ENDERMAN-GRIEF Flag
+    default: true
+  protectionstones.flag.greeting:
+    description: Allows Setting of Region GREETING Flag
+    default: true
+  protectionstones.flag.farewell:
+    description: Allows Setting of Region FAREWELL Flag
+    default: true
+  protectionstones.flag.notify-enter:
+    description: Allows Setting of Region NOTIFY-ENTER Flag
+    default: true
+  protectionstones.flag.notify-leave:
+    description: Allows Setting of Region NOTIFY-LEAVE Flag
+    default: true
+  protectionstones.flag.exit:
+    description: Allows Setting of Region EXIT Flag
+    default: true
+  protectionstones.flag.entry:
+    description: Allows Setting of Region ENTRY Flag
+    default: true
+  protectionstones.flag.heal-amount:
+    description: Allows Setting of Region HEAL-AMOUNT Flag
+    default: true
+  protectionstones.flag.heal-delay:
+    description: Allows Setting of Region HEAL-DELAY Flag
+    default: true
+  protectionstones.flag.heal-min-health:
+    description: Allows Setting of Region HEAL-MIN-HEALTH Flag
+    default: true
+  protectionstones.flag.heal-max-health:
+    description: Allows Setting of Region HEAL-MAX-HEALTH Flag
+    default: true
+  protectionstones.flag.feed-delay:
+    description: Allows Setting of Region FEED-DELAY Flag
+    default: true
+  protectionstones.flag.feed-amount:
+    description: Allows Setting of Region FEED-AMOUNT Flag
+    default: true
+  protectionstones.flag.feed-min-hunger:
+    description: Allows Setting of Region FEED-MIN-HUNGER Flag
+    default: true
+  protectionstones.flag.feed-max-hunger:
+    description: Allows Setting of Region FEED-MAX-HUNGER Flag
+    default: true
+  protectionstones.flag.snow-fall:
+    description: Allows Setting of Region SNOW-FALL Flag
+    default: true
+  protectionstones.flag.snow-melt:
+    description: Allows Setting of Region SNOW-MELT Flag
+    default: true
+  protectionstones.flag.ice-form:
+    description: Allows Setting of Region ICE-FORM Flag
+    default: true
+  protectionstones.flag.ice-melt:
+    description: Allows Setting of Region ICE-MELT Flag
+    default: true
+  protectionstones.flag.mushroom-growth:
+    description: Allows Setting of Region MUSHROOM-GROWTH Flag
+    default: true
+  protectionstones.flag.leaf-decay:
+    description: Allows Setting of Region LEAF-DECAY Flag
+    default: true
+  protectionstones.flag.grass-growth:
+    description: Allows Setting of Region GRASS-GROWTH Flag
+    default: true
+  protectionstones.flag.fire-spread:
+    description: Allows Setting of Region FIRE-SPREAD Flag
+    default: true
+  protectionstones.flag.lava-fire:
+    description: Allows Setting of Region LAVA-FIRE Flag
+    default: true
+  protectionstones.flag.lava-flow:
+    description: Allows Setting of Region LAVA-FLOW Flag
+    default: true
+  protectionstones.flag.water-flow:
+    description: Allows Setting of Region WATER-FLOW Flag
+    default: true
+  protectionstones.flag.teleport:
+    description: Allows Setting of Region TELEPORT Flag
+    default: true
+  protectionstones.flag.teleport-group:
+    description: Allows Setting of Region TELEPORT-GROUP Flag
+    default: true
+  protectionstones.flag.spawn:
+    description: Allows Setting of Region SPAWN Flag
+    default: true
+  protectionstones.flag.spawn-group:
+    description: Allows Setting of Region SPAWN-GROUP Flag
+    default: true
+  protectionstones.flag.blocked-cmds:
+    description: Allows Setting of Region BLOCKED-CMDS Flag
+    default: true
+  protectionstones.flag.allowed-cmds:
+    description: Allows Setting of Region ALLOWED-CMDS Flag
+    default: true
+  protectionstones.flag.price:
+    description: Allows Setting of Region PRICE Flag
+    default: true
+  protectionstones.flag.buyable:
+    description: Allows Setting of Region BUYABLE Flag
+    default: true
